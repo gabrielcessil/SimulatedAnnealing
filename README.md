@@ -2,36 +2,54 @@
 
 This repository provides a set of MATLAB functions designed to assist in the initialization of **Simulated Annealing (SA)** algorithms by calculating a suitable starting temperature `T₀`. This is crucial for tuning the algorithm to effectively explore the search space and avoid premature convergence.
 
-The method implemented here is based on an energy-difference-based approach, where the initial temperature `T₀` is estimated using a reference cost difference (`ΔE`) and an initial acceptance probability (`E₀`).
+## What is Simulated Annealing?
 
-## Purpose
+Simulated Annealing is a probabilistic optimization algorithm inspired by the physical annealing process in metallurgy. It is designed to find the global minimum of a cost (objective) function by probabilistically accepting both better and worse solutions during its iterative process. The algorithm gradually reduces the probability of accepting worse solutions over time by decreasing the "temperature" parameter.
 
-In Simulated Annealing, the choice of the initial temperature `T₀` significantly affects convergence speed and solution quality. The method used here computes `T₀` such that:
+At high temperatures, the algorithm explores widely, potentially escaping local minima. As the temperature lowers, the search becomes more refined, converging toward a minimum. Choosing a proper initial temperature `T₀` is critical to balance exploration and exploitation effectively.
+
+---
+
+## Purpose of this Tool
+
+This tool helps determine a suitable starting temperature `T₀` based on a typical cost difference (`ΔE`) and an initial acceptance probability (`E₀`) using the formula:
 
 ```
 T₀ = -ΔE / log(E₀)
 ```
 
-This formula helps define a probabilistic acceptance rule for worse solutions early in the search process, improving the exploration capacity of the SA algorithm.
+This formula allows you to set how likely the algorithm should be to accept worse solutions at the beginning of the optimization process.
 
 ---
 
 ## File Descriptions
 
 - **`calculate_T0.m`**  
-  Computes the initial temperature `T₀` based on a user-defined energy difference and initial acceptance probability:
+  **Input:**  
+  - `DELTA_E`: A typical or estimated cost (energy) increase between two candidate solutions.  
+  - `E0`: A desired initial probability of accepting a worse solution.  
+
+  **Output:**  
+  - `T0`: The calculated starting temperature.  
+
   ```matlab
   T0 = calculate_T0(DELTA_E, E0)
   ```
 
 - **`E0_function.m`**  
-  A sample function that evaluates the acceptance probability metric `E₀`. Currently, it returns the maximum value in the input vector:
+  A sample function used to compute the initial acceptance metric `E₀`.  
+  **Input:** A vector `x`.  
+  **Output:** The maximum value in `x` (used as a proxy for E₀).  
+
   ```matlab
   E0 = E0_function(x)
   ```
 
 - **`griewank_function.m`**  
-  Implements the **Griewank function**, a common test benchmark for optimization algorithms with a known global minimum at the origin. Useful for evaluating the performance of optimization routines like Simulated Annealing:
+  A widely used test function for optimization. The **Griewank function** has a known global minimum at `x = [0, 0, ..., 0]`, where the function evaluates to 0.  
+  **Input:** A numeric vector `x`.  
+  **Output:** The function value at `x`.  
+
   ```matlab
   f = griewank_function(x)
   ```
