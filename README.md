@@ -5,13 +5,13 @@ This repository provides a set of MATLAB functions designed to assist in the ini
 
 
 <p align="center">
-  <img src="Images/ackley_function/Map.gif" alt="Benchmark: Ackley Function's cost map" width="45%" style="margin-right: 5px;" />
-  <img src="Images/ackley_function/history.gif" alt="Benchmark: Ackley Function's iterations" width="45%" />
+  <img src="Images/ackley_function/Map.png" alt="Benchmark: Ackley Function's cost map" width="45%" style="margin-right: 5px;" />
+  <img src="Images/ackley_function/history.png" alt="Benchmark: Ackley Function's iterations" width="45%" />
 </p>
 
 <p align="center">
-  <img src="Images/sphere_function/Map" alt="Benchmark: Sphere Function's cost map" width="45%" style="margin-right: 5px;" />
-  <img src="Images/sphere_function/history" alt="Benchmark: Sphere Function's iterations" width="45%" />
+  <img src="Images/sphere_function/Map.png" alt="Benchmark: Sphere Function's cost map" width="45%" style="margin-right: 5px;" />
+  <img src="Images/sphere_function/history.png" alt="Benchmark: Sphere Function's iterations" width="45%" />
 </p>
 
 ## What is Simulated Annealing?
