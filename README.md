@@ -2,6 +2,18 @@
 
 This repository provides a set of MATLAB functions designed to assist in the initialization of **Simulated Annealing (SA)** algorithms by calculating a suitable starting temperature `T₀`. This is crucial for tuning the algorithm to effectively explore the search space and avoid premature convergence.
 
+
+
+<p align="center">
+  <img src="Images/ackley_function/Map.gif" alt="Benchmark: Ackley Function's cost map" width="45%" style="margin-right: 5px;" />
+  <img src="Images/ackley_function/history.gif" alt="Benchmark: Ackley Function's iterations" width="45%" />
+</p>
+
+<p align="center">
+  <img src="Images/sphere_function/Map" alt="Benchmark: Sphere Function's cost map" width="45%" style="margin-right: 5px;" />
+  <img src="Images/sphere_function/history" alt="Benchmark: Sphere Function's iterations" width="45%" />
+</p>
+
 ## What is Simulated Annealing?
 
 Simulated Annealing is a probabilistic optimization algorithm inspired by the physical annealing process in metallurgy. It is designed to find the global minimum of a cost (objective) function by probabilistically accepting both better and worse solutions during its iterative process. The algorithm gradually reduces the probability of accepting worse solutions over time by decreasing the "temperature" parameter.
