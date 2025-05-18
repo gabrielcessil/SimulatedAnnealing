@@ -32,13 +32,16 @@ Benchmark cases were included, illustrating the usage and the convergence of the
 ---
 
 Choosing a proper initial temperature `T₀` is critical to balance exploration and exploitation effectively. In literature, several methods of defining initial and new temperature.
-This tool helps determine a suitable starting temperature `T₀` based on a typical cost difference (`ΔE`) and an initial acceptance probability (`E₀`) using the formula:
+
+By default, this tool helps determine a suitable starting temperature `T₀` based on a typical cost difference (`ΔE`) and an initial acceptance probability (`E₀`) using the formula:
 
 ```
 T₀ = -ΔE / log(E₀)
 ```
 
-This formula allows you to set how likely the algorithm should be to accept worse solutions at the beginning of the optimization process. Also, the "typical cost difference" can calculated based on experimental runs of the cost function, scaling this parameter accordanly to the problem of interest.
+This allows you to set how likely the algorithm should be to accept worse solutions at the beginning of the optimization process. Also, the "typical cost difference" can calculated based on experimental runs of the cost function, scaling this parameter accordanly to the problem of interest. Alternatively, T₀ may be assigned any scalar value as needed.
+
+At each location, the algorithm attempts to find 'local_suc' lower-cost solutions before proceeding. In this context, the number of 'local_attempts' is predefined. Along with 'global_attempts', these values can be set by the user and determine the total number of iterations (i.e., cost function evaluations).
 
 ---
 
