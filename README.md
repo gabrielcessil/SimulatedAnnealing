@@ -21,8 +21,7 @@ Simulated Annealing is a probabilistic optimization algorithm inspired by the ph
 ## Content
 
 ---
-Benchmark cases were included, illustrating the usage and the convergence of the algorithm. You can find more about this tests in [this link](https://en.wikipedia.org/wiki/Test_functions_for_optimization
-)
+Benchmark cases were included, illustrating the usage and the convergence of the algorithm. You can find more about this tests in [this link](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
 
 ---
 
