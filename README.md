@@ -15,7 +15,7 @@ This repository provides a set of MATLAB functions designed to assist in the ini
 
 ## What is Simulated Annealing?
 
-Simulated Annealing is a probabilistic optimization algorithm inspired by the physical annealing process in metallurgy. It is designed to find the global minimum of a cost (objective) function by probabilistically accepting *both better and worse* solutions during its iterative process. The algorithm gradually reduces the probability of accepting worse solutions over time by decreasing the "temperature" parameter, while new solutions are creating introducing some variance (also called entropy) into the current one, exploring randomly the parametric space. The probability is driven by temperature, such that at high temperatures, the algorithm explores widely, potentially escaping local minima. As the temperature lowers, the search becomes more refined, converging toward a minimum.
+Simulated Annealing is a probabilistic optimization algorithm inspired by the physical annealing process in metallurgy. It is designed to find the global minimum of a cost (objective) function by probabilistically accepting *both better and worse* solutions during its iterative process. The algorithm gradually reduces the probability of accepting worse solutions over time by decreasing the "temperature" parameter, while new solutions are creating introducing some variance (also called entropy or perturbations) into the current one, exploring randomly the parametric space. The probability is driven by temperature, such that at high temperatures, the algorithm explores widely, potentially escaping local minima. As the temperature lowers, the search becomes more refined, converging toward a minimum.
 
 
 ## Content
