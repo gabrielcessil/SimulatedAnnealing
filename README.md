@@ -3,7 +3,6 @@
 This repository provides a set of MATLAB functions designed to assist in the initialization of **Simulated Annealing (SA)** algorithms by calculating a suitable starting temperature `T₀`. This is crucial for tuning the algorithm to effectively explore the search space and avoid premature convergence.
 
 
-
 <p align="center">
   <img src="Images/ackley_function/Map.png" alt="Benchmark: Ackley Function's cost map" width="45%" style="margin-right: 5px;" />
   <img src="Images/ackley_function/history.png" alt="Benchmark: Ackley Function's iterations" width="45%" />
@@ -16,21 +15,24 @@ This repository provides a set of MATLAB functions designed to assist in the ini
 
 ## What is Simulated Annealing?
 
-Simulated Annealing is a probabilistic optimization algorithm inspired by the physical annealing process in metallurgy. It is designed to find the global minimum of a cost (objective) function by probabilistically accepting both better and worse solutions during its iterative process. The algorithm gradually reduces the probability of accepting worse solutions over time by decreasing the "temperature" parameter.
+Simulated Annealing is a probabilistic optimization algorithm inspired by the physical annealing process in metallurgy. It is designed to find the global minimum of a cost (objective) function by probabilistically accepting *both better and worse* solutions during its iterative process. The algorithm gradually reduces the probability of accepting worse solutions over time by decreasing the "temperature" parameter, while new solutions are creating introducing some variance (also called entropy) into the current one, exploring randomly the parametric space. The probability is driven by temperature, such that at high temperatures, the algorithm explores widely, potentially escaping local minima. As the temperature lowers, the search becomes more refined, converging toward a minimum.
 
-At high temperatures, the algorithm explores widely, potentially escaping local minima. As the temperature lowers, the search becomes more refined, converging toward a minimum. Choosing a proper initial temperature `T₀` is critical to balance exploration and exploitation effectively.
+
+## Content
+
+---
+Benchmark cases were included, illustrating the usage and the convergence of the algorithm. Such be
 
 ---
 
-## Purpose of this Tool
-
+Choosing a proper initial temperature `T₀` is critical to balance exploration and exploitation effectively. In literature, several methods of defining initial and new temperature.
 This tool helps determine a suitable starting temperature `T₀` based on a typical cost difference (`ΔE`) and an initial acceptance probability (`E₀`) using the formula:
 
 ```
 T₀ = -ΔE / log(E₀)
 ```
 
-This formula allows you to set how likely the algorithm should be to accept worse solutions at the beginning of the optimization process.
+This formula allows you to set how likely the algorithm should be to accept worse solutions at the beginning of the optimization process. Also, the "typical cost difference" can calculated based on experimental runs of the cost function, scaling this parameter accordanly to the problem of interest.
 
 ---
 
