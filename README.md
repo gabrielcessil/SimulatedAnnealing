@@ -17,6 +17,9 @@ This repository provides a set of MATLAB functions designed to assist in the ini
   <img src="Images/sphere_function/history.png" alt="Benchmark: Sphere Function's optimization iterations" width="45%" />
 </p>
 
+While MATLAB offers a built-in implementation of Simulated Annealing through its [Global Optimization Toolbox](https://www.mathworks.com/discovery/simulated-annealing.html), this project was born out of necessity. The license I had for an older version of MATLAB did not include access to this toolbox.As a result, I developed this standalone version of the Simulated Annealing algorithm. 
+
+This isn’t my first time implementing it—I've built it from scratch before as part of my learning process. Reimplementing the algorithm not only solved the toolbox limitation but also reinforced my understanding of how it works. So, I strongly reccomend doing the same if you are learning and exploring this fun algorithm.
 
 
 ## What is Simulated Annealing?
