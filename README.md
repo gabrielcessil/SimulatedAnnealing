@@ -64,23 +64,13 @@ This formula allows you to set how likely the algorithm should be to accept wors
   ```matlab
   E0 = E0_function(x)
   ```
-
-- **`griewank_function.m`**  
-  A widely used test function for optimization. The **Griewank function** has a known global minimum at `x = [0, 0, ..., 0]`, where the function evaluates to 0.  
-  **Input:** A numeric vector `x`.  
-  **Output:** The function value at `x`.  
-
-  ```matlab
-  f = griewank_function(x)
-  ```
-
 ---
 
 ## Example Usage
 
 ```matlab
 % Example input vector for evaluation
-x = rand(1, 10); % Random 10-dimensional vector
+x = rand(1, 2); % Random 10-dimensional vector
 
 % Step 1: Compute E0 using the E0 metric
 E0 = E0_function(x);
