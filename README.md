@@ -3,18 +3,18 @@
 This repository provides a set of MATLAB functions designed to assist in the initialization of **Simulated Annealing (SA)** algorithms by calculating a suitable starting temperature `T₀`. This is crucial for tuning the algorithm to effectively explore the search space and avoid premature convergence.
 
 
-<p align="center"><strong>Ackley Function</strong></p>
+<p align="center"><strong>Ackley Function Benchmark</strong></p>
 
 <p align="center">
   <img src="Images/ackley_function/Map.png" alt="Benchmark: Ackley Function's cost map" width="45%" style="margin-right: 5px;" />
   <img src="Images/ackley_function/history.png" alt="Benchmark: Ackley Function's iterations" width="45%" />
 </p>
 
-<p align="center"><strong>Sphere Function</strong></p>
+<p align="center"><strong>Sphere Function Benchmark</strong></p>
 
 <p align="center">
-  <img src="Images/sphere_function/Map.png" alt="Benchmark: Sphere Function's cost map" width="45%" style="margin-right: 5px;" />
-  <img src="Images/sphere_function/history.png" alt="Benchmark: Sphere Function's iterations" width="45%" />
+  <img src="Images/sphere_function/Map.png" alt="Sphere Function's optimization cost map" width="45%" style="margin-right: 5px;" />
+  <img src="Images/sphere_function/history.png" alt="Benchmark: Sphere Function's optimization iterations" width="45%" />
 </p>
 
 
